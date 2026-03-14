@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teaching - Prof. Z. Justin Ren</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">Prof. Z. Justin Ren</a>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+      <nav id="navMenu">
+        <a href="index.html">Bio</a>
+        <a href="teaching.html" class="active">Teaching</a>
+        <a href="writing.html">Writing</a>
+        <a href="interviews.html">Interviews &amp; Media</a>
+        <a href="office-hours.html">Office Hours</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Teaching</h1>
+      <div class="coming-soon">
+        <p>Content coming soon...</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Z. Justin Ren. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    menuToggle.addEventListener('click', function() { navMenu.classList.toggle('active'); });
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => { link.addEventListener('click', function() { navMenu.classList.remove('active'); }); });
+    function setActiveNav() {
+      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      navLinks.forEach(link => { if (link.getAttribute('href') === currentPage) { link.classList.add('active'); } else { link.classList.remove('active'); } });
+    }
+    setActiveNav();
+  </script>
+</body>
+</html>
