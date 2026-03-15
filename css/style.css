@@ -1,0 +1,518 @@
+/* Professor Website - Google Sites Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+  background-color: #9b1b30;
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.logo:hover {
+  opacity: 0.9;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  border-bottom-color: #fff;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+main {
+  min-height: calc(100vh - 300px);
+  padding: 3rem 2rem;
+}
+
+/* Typography */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 2rem 0 1rem;
+  color: #1a1a1a;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+  color: #1a1a1a;
+  border-bottom: 2px solid #9b1b30;
+  padding-bottom: 0.5rem;
+}
+
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 1.5rem 0 0.75rem;
+  color: #333;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #9b1b30;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #6d1425;
+  text-decoration: underline;
+}
+
+/* Bio Page Specific */
+.bio-header {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  align-items: flex-start;
+}
+
+.bio-photo {
+  flex-shrink: 0;
+  width: 250px;
+}
+
+.bio-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.bio-text {
+  flex: 1;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #555;
+  margin: 0.5rem 0;
+}
+
+.institution {
+  text-align: center;
+  color: #9b1b30;
+  font-weight: 600;
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+.department {
+  text-align: center;
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.social-icons {
+  text-align: center;
+  margin: 1.5rem 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  color: #9b1b30;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #9b1b30;
+  color: white;
+  text-decoration: none;
+}
+
+/* Contact Info */
+.contact-info {
+  background-color: #f9f9f9;
+  border-left: 4px solid #9b1b30;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 2px;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+}
+
+/* Expertise Areas */
+.expertise {
+  background-color: #fafafa;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 4px;
+}
+
+.expertise h3 {
+  margin-top: 0;
+}
+
+.expertise-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.expertise-list li {
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.expertise-list li:before {
+  content: '▸';
+  color: #9b1b30;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Education */
+.education {
+  margin: 2rem 0;
+}
+
+.education-item {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+  border-left: 3px solid #e0e0e0;
+}
+
+.education-item.current {
+  border-left-color: #9b1b30;
+}
+
+.degree {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.institution-edu {
+  color: #9b1b30;
+  font-weight: 500;
+}
+
+.year {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+/* Honors */
+.honors {
+  margin: 2rem 0;
+}
+
+.honors-list {
+  list-style: none;
+}
+
+.honors-list li {
+  padding: 0.75rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.honors-list li:before {
+  content: '★';
+  color: #9b1b30;
+  position: absolute;
+  left: 0;
+}
+
+/* Publications */
+.publications {
+  margin: 2rem 0;
+}
+
+.books {
+  margin-bottom: 3rem;
+}
+
+.book-item {
+  background-color: #fafafa;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  border-left: 4px solid #9b1b30;
+}
+
+.book-item .title {
+  text-align: left;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem 0;
+}
+
+.book-item .authors {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.book-item .year {
+  color: #999;
+  font-size: 0.85rem;
+}
+
+.papers {
+  margin: 2rem 0;
+}
+
+.paper-item {
+  padding: 1rem 0;
+  padding-left: 2rem;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.paper-item:last-child {
+  border-bottom: none;
+}
+
+.paper-item .number {
+  position: absolute;
+  left: 0;
+  color: #9b1b30;
+  font-weight: 600;
+  min-width: 1.5rem;
+}
+
+.paper-item .title {
+  text-align: left;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.paper-item .authors {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.paper-item .journal {
+  color: #666;
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
+/* Coming Soon */
+.coming-soon {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #999;
+}
+
+.coming-soon p {
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  padding: 2rem;
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header .container {
+    padding: 0 1rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #7d1628;
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 0;
+    width: 100%;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    padding: 1rem 2rem;
+    border-bottom: none;
+    border-left: 3px solid transparent;
+  }
+
+  nav a:hover,
+  nav a.active {
+    border-left-color: #fff;
+    background-color: rgba(255,255,255,0.1);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .bio-header {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .bio-photo {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  main {
+    padding: 2rem 1rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .expertise-list {
+    grid-template-columns: 1fr;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+    margin: 1rem 0 0.75rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  nav {
+    top: 50px;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+
+  .contact-info {
+    padding: 1rem;
+  }
+
+  .book-item,
+  .expertise {
+    padding: 1rem;
+  }
+}
